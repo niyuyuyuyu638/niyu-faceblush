@@ -55,7 +55,7 @@ function setup() {
 	video.hide();
 }
 function openwin(url) {
-window.open (url, “newwindow”, “toolbar =no, menubar=no, scrollbars=no, resizeable=no, location=no, status=no”)
+window.open (url, “newwindow”, “toolbar =no, menubar=no, scrollbars=no, resizeable=no, location=no, status=no”);
 }
 function modelReady() {
 	console.log("Model ready!");
