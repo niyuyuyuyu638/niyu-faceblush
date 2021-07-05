@@ -54,9 +54,6 @@ function setup() {
 	// Hide the video element, and just show the canvas
 	video.hide();
 }
-function openwin(url) {
-window.open (url, “newwindow”, “toolbar =no, menubar=no, scrollbars=no, resizeable=no, location=no, status=no”);
-}
 function modelReady() {
 	console.log("Model ready!");
 }
