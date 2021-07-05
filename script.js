@@ -16,8 +16,8 @@ console.log(isMobile(), isLandscape());
 let facemesh;
 let video;
 let predictions = [];
-const scaleFactorX = width / 1000;
-const scaleFactorY = height / 1000;
+const scaleFactorX = width / 1600;
+const scaleFactorY = height / 1280;
 
 let cameraOptions = {
 	video: {
