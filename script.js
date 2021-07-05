@@ -1,9 +1,8 @@
 "use strict";
 
-//let width = window.innerWidth;
-let height = window.innerHeight;
-let width = window.innerHeight / 0.75;
-//console.log(width)
+let width = window.innerWidth;
+let height = window.innerHeight * 0.75;
+console.log(width);
 function isMobile() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
