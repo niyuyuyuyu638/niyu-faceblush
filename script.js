@@ -16,8 +16,8 @@ console.log(isMobile(), isLandscape());
 let facemesh;
 let video;
 let predictions = [];
-const scaleFactorX = width / 1280;
-const scaleFactorY = height / 960;
+const scaleFactorX = width / 2400;
+const scaleFactorY = height / 1080;
 
 let cameraOptions = {
 	video: {
@@ -42,7 +42,7 @@ function setup() {
 		video = createCapture(VIDEO);
 	}
 	video.size(width/2, height);
-	const faceOptions = { withLandmarks: true, withExpressions: false, withDescriptors: false, maxFaces: 10 ,detectionConfidence: 0.4,scoreThreshold: 0.75,iouThreshold: 0.3};
+	const faceOptions = { withLandmarks: true, withExpressions: false, withDescriptors: false, maxFaces: 10 ,detectionConfidence: 0.2,scoreThreshold: 0.5,iouThreshold: 0.2};
 	facemesh = ml5.facemesh(video, faceOptions, modelReady);
 
 	// This sets up an event that fills the global variable "predictions"
