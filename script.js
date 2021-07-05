@@ -16,8 +16,8 @@ console.log(isMobile(), isLandscape());
 let facemesh;
 let video;
 let predictions = [];
-const scaleFactorX = width / 1280;
-const scaleFactorY = height / 960;
+const scaleFactorX = width / 1600;
+const scaleFactorY = height / 1280;
 
 let cameraOptions = {
 	video: {
@@ -54,7 +54,9 @@ function setup() {
 	// Hide the video element, and just show the canvas
 	video.hide();
 }
-
+function openwin(url) {
+window.open (url, “newwindow”, “toolbar =no, menubar=no, scrollbars=no, resizeable=no, location=no, status=no”)
+}
 function modelReady() {
 	console.log("Model ready!");
 }
