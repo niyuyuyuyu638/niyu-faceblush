@@ -1,6 +1,6 @@
 "use strict";
 
-let width = window.innerWidth;
+//let width = window.innerWidth;
 let height = window.innerHeight;
 let width = window.innerHeight / 0.75;
 //console.log(width)
