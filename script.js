@@ -65,9 +65,47 @@ function draw() {
 	drawKeypoints();
 }
 
+function getFullscreenElement(){
+  return document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+}
+
+function toggleFullscreen(){
+  if(getFullscreenElement() == undefined){
+    console.log("not fullscreen")
+    document.documentElement.requestFullscreen().catch((e)=>{
+      console.log(e);
+    })
+  } else {
+    document.exitFullscreen()
+    console.log("fullscreen")
+  }
+}
+
+if(isMobile()){
+  document.addEventListener("touchStart", (ev)=>{
+    toggleFullscreen();
+    onlyTouch(ev);
+  })
+} else {
+  document.addEventListener("click", (ev)=>{
+    toggleFullscreen();
+    onlyClick(ev);
+  })  
+}
+  
+function onlyTouch(ev) {
+  console.log("Here a touchstart event is trigerred"); 
+  ev.preventDefault();
+}
+function onlyClick(ev) {
+  // Call preventDefault() to prevent any further handling
+  console.log("Here a click event is trigerred"); 
+  ev.preventDefault();
+  console.log("After triggering an event");
+}
+
 // A function to draw ellipses over the detected keypoints
 function drawKeypoints() {
-
 	let col = color("#ff3a41");
 	for (let i = 0; i < predictions.length; i += 1) {
 		const keypoints = predictions[i].scaledMesh;
