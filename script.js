@@ -2,7 +2,7 @@
 
 let width = window.innerWidth;
 let height = window.innerWidth * 0.75;
-console.log(width);
+//console.log(width);
 function isMobile() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
