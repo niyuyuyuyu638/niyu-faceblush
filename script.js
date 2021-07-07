@@ -42,7 +42,7 @@ function setup() {
 		video = createCapture(VIDEO);
 	}
 	video.size(width/2, height);
-	const faceOptions = { withLandmarks: true, withExpressions: false, withDescriptors: false, maxFaces: 10 ,detectionConfidence: 0.1,scoreThreshold: 0.5,iouThreshold: 0.2};
+	const faceOptions = { withLandmarks: true, withExpressions: false, withDescriptors: false, maxFaces: 10 ,detectionConfidence: 0.7};
 	facemesh = ml5.facemesh(video, faceOptions, modelReady);
 
 	// This sets up an event that fills the global variable "predictions"
